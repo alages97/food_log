@@ -13,7 +13,7 @@ const app = express();
 
 const port = process.env.PORT || 1337;
 
-const uri = 'mongodb://localhost/food-log';
+const uri = process.env.DATABASE_URL;
 
 mongoose.connect(uri, {
     useCreateIndex:true,
