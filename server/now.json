@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "name": " ",
+  "builds": [
+    {
+      "src": "src/index.js",
+      "use": "@now/node-server"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/.*",
+      "dest": "src/index.js"
+    }
+  ],
+  "env":{
+    "NODE_ENV":"production",
+    "PORT": "1337",
+    "DATABASE_URL" : "@food-log-db",
+    "CORS_ORIGIN" : "https://food-log.now.sh",
+    "API_KEY" : "@food-log-api-key"
+  }
+}
