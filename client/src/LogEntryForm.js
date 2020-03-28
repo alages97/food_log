@@ -22,13 +22,18 @@ const LogEntryForm = ({ location, onClose }) => {
     }
   };
 
+
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="entry-form">
       { error ? <h3 className="error">{error}</h3> : null}
+      <label htmlFor="apiKey">API KEY</label>
+      <input type="password" name="apiKey" required ref={register} />
       <label htmlFor="title">Title</label>
       <input name="title" required ref={register} />
       <label htmlFor="comments">Comments</label>
       <textarea name="comments" rows={3} ref={register}></textarea>
+      <label htmlFor="rating">Rating</label>
+      <input name="rating"  ref={register}/>
       <label htmlFor="image">Image</label>
       <input name="image" ref={register} />
       <label htmlFor="visitDate">Visit Date</label>
