@@ -30,8 +30,8 @@ body {
 }
 
 .popup img {
-  height: 200px;
-  width: auto;
+  height: auto;
+  width: 30vw;
   text-align: center;
   margin: 0 auto;
   display: block;
